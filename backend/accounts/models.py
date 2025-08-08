@@ -7,7 +7,9 @@ class User(models.Model):
         MALE = 'M', 'Male'
         FEMALE = 'F', "Female"
 
-    name = models.CharField(max_length=255)
+    username = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255, unique=True)
+    
     gender = models.CharField(
         max_length=2,
         choices=Gender,
@@ -19,4 +21,4 @@ class User(models.Model):
     suburb = models.CharField(max_length=255, blank=True)
 
     def __str__(self):
-        return self.name
+        return self.username
