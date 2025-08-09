@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', 'corshearders', 'django_filters',
+    'rest_framework', 'corsheaders', 'django_filters',
     'accounts', 'listings',
 ]
 
@@ -87,14 +87,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('POSTGRES_DB', "marketplace"),
         'USER': os.getenv("POSTGRES_USER", "postgres"),
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD", "hymfih-3pYzze-vatpoh"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD", "hymfih-3pYzze"),
         'HOST': os.getenv("POSTGRES_HOST", "localhost"),
         'POST': os.getenv("POSTGRES_PORT", "5432")
     }
 }
 
 CORS_ALLOW_ORIGINS = True
-AUTH_USER_MODEL = 'acoounts.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
