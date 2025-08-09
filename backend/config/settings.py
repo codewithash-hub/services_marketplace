@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 CORS_ALLOW_ORIGINS = True
-AUTH_USER_MODEL = 'accounts.User'
+# AUTH_USER_MODEL = 'accounts.User'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

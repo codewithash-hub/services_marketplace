@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Categoty, ServiceListing
+from .models import Category, ServiceListing
 from accounts.serializers import UserSerializer
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Categoty
+        model = Category
         fields = '__all__'
 
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from rest_framework import viewsets, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import ServiceListing, Categoty
+from .models import ServiceListing, Category
 from .serializers import ServiceListingSerializer, CategorySerializer
 
 # Create your views here.
@@ -25,6 +25,6 @@ class ServiceListingViewSet(viewsets.ModelViewSet):
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
-    queryset = Categoty.objects.all()
+    queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
